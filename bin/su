@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ "$1" == "admin" ]; then
+    read -sp "Password: " pass
+    echo
+
+    if [ "$pass" == "dungeon_root" ]; then
+        echo "👑 You are now admin"
+        export ROLE=admin
+        export PS1="(admin) \w $ "
+    else
+        echo "❌ Authentication failed"
+    fi
+else
+    echo "Usage: su admin"
+fi
