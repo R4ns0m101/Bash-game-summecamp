@@ -5,9 +5,8 @@ if [ "$1" == "admin" ]; then
     echo
 
     if [ "$pass" == "dungeon_root" ]; then
-        echo "👑 You are now admin"
-        export ROLE=admin
-        export PS1="(admin) \w $ "
+        echo "👑 You are now admin — spawning admin shell..."
+        ROLE=admin PS1="(admin) \w \$ " exec bash
     else
         echo "❌ Authentication failed"
     fi
