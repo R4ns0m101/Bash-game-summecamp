@@ -1,1 +1,2 @@
-Names matter.
+Names matter. Wrong names hide secrets.
+Run ./check.sh when you think you've fixed it.
